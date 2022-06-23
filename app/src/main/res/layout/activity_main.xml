@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接蓝牙"
+        android:id="@+id/btn1"/>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上"
+        android:id="@+id/top"/>
+    <Button
+        android:layout_below="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下"
+        android:id="@+id/bottom"/>
+    <Button
+        android:layout_below="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="左"
+        android:id="@+id/left"/>
+    <Button
+        android:layout_below="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="右"
+        android:id="@+id/right"/>
+    <Button
+        android:layout_below="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止"
+        android:id="@+id/stop"/>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="速度:"
+        android:layout_toRightOf="@+id/btn1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="80dp"/>
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btn1"
+        android:max="255"
+        android:progress="255"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+
+        />
+    <com.myapp.bluetooh3.Mypreview
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/right"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:id="@+id/mypreview"
+        />
+    <TextView
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FPS:"
+        android:id="@+id/textView"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@color/teal_200"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:id="@+id/linear">
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="设备:"/>
+        <ListView
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:id="@+id/list_view"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
